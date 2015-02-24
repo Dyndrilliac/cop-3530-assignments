@@ -1,0 +1,45 @@
+Assignment #5       NO LATE ASSIGNMENTS ACCEPTED PLEASE.     
+DUE 11 pm Tuesday, June 11, 2013
+
+Write a program to implement Huffman coding and decoding (see pages 415-421) in Java.
+
+The program's input will be a command line file that can contain any char, but the 
+only ones of interest in this assignment are the capital letters A through G.
+A COMMAND LINE FILE IS JUST THAT: A FILE NAME THAT IS ENTERED ON THE COMMAND
+LINE PRIOR TO RUNNING THE PROGRAM.
+
+IF the file happens to contain chars other than A through G IGNORE THEM in a-d.
+Spaces should be ignored , for example , as should other chars!
+
+I want you to display (all answers MUST  go to 
+the console):
+
+  a.  The Huffman tree (see page 405 and 418 )itself (you may use the code from Tree.java if you wish.)
+      You may assume that the tree will turn out to be no deeper than the tree shown on page 405.
+      You may also assume that no individual char appears more than 10 times.
+      The Huffman tree can be constructed using a priority queue.
+
+  b.  the code table that displays the encoding for each of the chars A through G (see page 
+      416-417.) EXERCISE  OPTION a BEFORE  b. 
+
+  c.  the binary encoding of the portion of the file
+      that only contains the chars A through G (after each eight bits leave a space and print only 3 bytes per line.)
+      The binary encoding may not necessarily display a "full" byte at the end (see page 417.) c SHOULD BE EXERCISED
+      AFTER b. 
+
+ d.  the A-G portion of the original file that is calculated by using the HUFFMAN TREE  from
+     part a and the binary encoding from part c (don't just print the file back from the original; you
+     must use the HUFFMAN TREE to do this.)  So you want to "read" the binary encoding from part c (using the 
+     HUFFMAN TREE from part a to reconstruct the portion of the file that consists of A through G.)  BASICALLY
+     YOU ARE DEOCODING THE PORTION OF THE FILE THAT CONSISTS OF THE CHARS A-G.  AS YOU READ THE ENCODED FILE
+     YOU ARE  MARCHING DOWN THE HUFFMAN TREE--WHEN YOU REACH A LEAF, YOU CAN FIGURE OUT WHICH CHAR IT IS AND
+     YOU PRINT THAT CHAR. 
+
+
+                  
+Same rules as other programs. I will use jGrasp. One file only. Name it correctly.
+$ turnin bigone kmartin.cop3530.a5
+
+Best regards,
+
+Ken Martin

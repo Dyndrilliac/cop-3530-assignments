@@ -1,0 +1,60 @@
+Assignment #1        NO LATE ASSIGNMENTS ACCEPTED PLEASE.     
+DUE 11 pm Saturday, May 11,  2013                 
+
+Generally I will run your Java program on jGrasp with Windows.
+You must use SSH to ftp your code 
+to Osprey so that you can use turnin (see #5 below).  
+
+
+Any Java program that you turn in will always be in a single file named unfid.java where unfid
+is YOUR unf id.  So , I would name my file n00009873.java . This implies that the name of the class 
+containing main 
+must be n00009873.  So in this program you must change HighArray.java to unfid.java and ALSO 
+rename the class HighArrayApp to unfid (always pay attention to capitalization).
+
+So , in general, my class containing main will be named n00009873
+and the file containing all my classes will be named n00009873.java
+
+
+1.	log on to osprey.
+2.	change your password (if you like!)
+        $ passwd 
+
+3.	Construct program 2.1 on page 76 of the book.
+	Make the last two lines of code:
+          
+	y=arr.getMax(); /*this should work with any data set not just the data he has.
+                      I will modify the data in your code to test it with several
+                      data sets. You should declare any variables like y that you need.*/
+	System.out.println(y); 
+
+	All of the source code should be in a single file , named unfid.java
+	So my file would be named n00009873.java
+	I need you to name your file unfid.java because
+	turnin (see #5 below) renames your turned in file to unfid, where unfid is YOUR 
+	unf id and I 
+	want an easy way to simply  rename your turned in file back to unfid.java (!!!).
+	I know this is convoluted, but I don't want you to use disks to turn in assignments.
+	I want you to use turnin on Osprey.
+
+4.      Compile the program using jGrasp.
+
+5.	turnin an electronic version of "unfid.java" using
+	$ turnin unfid.java  kmartin.cop3530.a1
+
+	When I get it , the system renames it unfid (YOUR unfid).
+
+6.	check to see if the size of the file you saved is the same as the size
+        of the file turned in
+
+	$ turnin -c kmartin.cop3530.a1  (this is a-one, not a-ell)
+        (tells you how many bytes you have turned in--check against how
+        many you have saved) 
+    	$ ls -l
+        (list with long option)
+ 
+Generally, I will compile your file  and then run it.  You should
+do the same on Osprey or using jGrasp on Windows to make sure you have done everything properly.
+
+NEVER turnin ANY BINARY CODE IN THIS CLASS.  NO LATE ASSIGNMENTS ACCEPTED..GET IT DONE 
+EARLY!

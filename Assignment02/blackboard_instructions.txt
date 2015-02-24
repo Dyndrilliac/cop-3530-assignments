@@ -1,0 +1,69 @@
+Use the C language for this assignment.
+See page 1092-1093 of C book for argc and argv[] info or google the terms if need be. 
+You need this so that the file that is scanned can have any name whatsoever.
+
+Assignment #2        NO LATE ASSIGNMENTS ACCEPTED PLEASE.     
+DUE 11 p.m. Thursday, May 16, 2013                 
+
+IF you have questions please ask early!
+
+See problem 3.4 on page 112. You are going to implement the odd-even sort.  You don't need to do any of his 
+instructions concerning listing 3.1.
+
+The task will be to sort a file using a single command line file. HOWEVER, I don't want to see the whole
+sorted file, so the output will simply be any of the ints in the sorted file (that I may specify--see below) when sorting
+from lowest to highest). So I should be able to query and repeatedly ask for a number in a certain index until
+I ask for -1 which indicates an invalid index and the program should stop. So, for example, if the index specified is
+3 then I want the number in index 3 (which will be the 4th smallest number). Next, I might specify 500 or whatever. Eventually I specify -1
+and the program stops. 
+
+For THIS  program I am am going to use gcc on Osprey  with a single command line file 
+that will have a very large number of random ints (at least 1000, perhaps significantly more and they might be 
+positive, negative , or zero). The very first number in the file, however, is not actual data, but rather it specifies
+the number of numbers after it.  So you will want to calloc an array to store the data so that the array is the correct size.
+DO NOT STORE THE VERY FIRST NUMBER IN THE ARRAY. ONLY STORE THE NUMBERS AFTER THAT AND OF COURSE THE SMALLEST NUMBER WILL
+EVENTUALLY BE STORED IN INDEX 0 (NOT 1).
+
+So I will type
+$ unshar bigone
+$ gcc *.c
+$ a.out myfile
+to test your program.
+
+The number of ints on a single line is unknown; there might be just one or there might be
+many. They will be separated by "white space"...blanks, tabs, or newlines.
+
+You should use your own test file or files.
+
+shar together all your C files and any header file and turn in that file.
+$ shar -T  *.c *.h >bigone
+$ turnin bigone kmartin.cop3530.a2
+
+
+NEVER turnin ANY BINARY CODE IN THIS CLASS.  NO LATE ASSIGNMENTS ACCEPTED..GET IT DONE 
+EARLY!
+
+
+The following is from a link on my opening BB page called a modular approach to writing C code. It may be useful to you:
+
+
+ A modular approach to writing C code.
+
+1.	For each function, including main(),  f() that is written store it as f.c and put #include "my.h" as first line. Put all functions and my.h in a folder by 
+themselves.  You should use at least one other function besides main()
+2.	Compile each function separately without linking , as in $ gcc -c f.c or to do them all at once $ gcc -c *.c-this produces f.o, etc.
+3.	Compile and link all .o's together , as in $ gcc *.o
+4.	$./a.out runs the program or $./a.out myfile  etc
+5.	$ shar *.c my.h >bigone
+6.	$ turnin bigone kmartin.cop3530.a2 for example.
+7.	When I get the code, I $ unshar bigone
+8.	$ gcc -c *.c
+9.	$ gcc *.o  etc
+In  my.h put
+# include <stdio.h>
+# include <anyother.h> that you need
+All function prototypes separated by semicolons
+All structures separated by semicolons
+NO variables
+
+Your program must compile and run on Osprey using gcc as the compiler.

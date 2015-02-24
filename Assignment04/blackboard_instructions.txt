@@ -1,0 +1,46 @@
+Assignment #4        NO LATE ASSIGNMENTS ACCEPTED PLEASE.     
+DUE 11 pm Saturday, June 1, 2013
+
+
+Do problem 6.4 (recursively) on page 313. The input should be captured on a single line in a window,
+such as for the example, but with the target  FIRST followed by the weights, on page 306:
+
+20 11 8 7 6 5
+In this case the output would be:
+8 7 5
+
+Be sure and show all possible solutions! This is important! Only partial credit if this is not done.
+
+
+It would be nice to have the output also in a window, but if you prefer the console, that is ok.
+You may assume that the largest capacity (as well as any individual weight) is 100 and the largest
+number of weights is 25.
+You may also assume that the weights are sorted from largest to smallest.
+The basic idea is to send a capacity and an array of weights to a recursive method and to either insert the 
+weight or not. In either case call the method again with a reduced capacity and a shorter array OR with the same
+capacity and a shorter array. There should be a base case(s) for easy capacity and/or easy array.
+
+	$ turnin bigone kmartin.cop3530.a4
+
+ONLY turnin the .java file.
+(no shars please)
+
+	Check to see if the size of the file you saved is the same as the
+	size of the file turned in
+
+	$ turnin -c kmartin.cop3530.a4 (tells you how many
+	bytes you have turned in--check against how
+        many you have saved) 
+    	$ ls -l
+        (list with long option)
+
+
+GENERAL INSTRUCTIONS 
+**********************
+The program that you turn in will always be in a single file named unfid.java where unfid
+is YOUR unf id.  So , I would name my file n00009873.java . This implies that the name of the class
+containing main must be n00009873. 
+
+So , in general, my class containing main will be named n00009873
+and the file containing all my classes will be named n00009873.java
+

@@ -2,16 +2,14 @@
 	Main source file.
 	Contains program entry point function.
 
-	Author: Matthew Boyette
-	Date:   6/24/2013
+	Author:	Matthew Boyette
+	Date:	6/24/2013
 */
 
 #include "main.h"
 
 int main (int argc, char *argv[])
 {
-	size_t i;
-
 	// If there is a command-line argument...
 	if (argc > 1)
 	{
@@ -26,7 +24,7 @@ int main (int argc, char *argv[])
 			topo(adjList);
 
 			// Free up the memory allocated to the adjacency list.
-			for (i = 0; i < adjList->size; i++)
+			for (size_t i = 0; i < adjList->size; i++)
 			{
 				free(adjList->rows[i].vertex);
 				free(adjList->rows[i].firstAdj);
@@ -43,5 +41,6 @@ int main (int argc, char *argv[])
 		exit(1);
 	}
 	
+	fprintf(stdout, "\nExiting...\n");
 	return 0;
 }

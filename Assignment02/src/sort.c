@@ -2,16 +2,15 @@
 	Sort source file.
 	Contains sort function.
 
-	Author: Matthew Boyette
-	Date:   5/14/2013
+	Author:	Matthew Boyette
+	Date:	5/14/2013
 */
 
 #include "main.h"
 
-void sort(int* arrayPointer, int size)
+void sort(int* arrayPointer, size_t size)
 {
 	bool sorted = false; // Necessary initial condition.
-	int  i;              // Counter.
 	
 	// Continue to execute the algorithm until the array is completely sorted.
 	while (!sorted)
@@ -20,7 +19,7 @@ void sort(int* arrayPointer, int size)
 		sorted = true;
 		
 		// Sort the even indices.
-		for (i = 0; i < (size-1); i += 2)
+		for (size_t i = 0; i < (size-1); i += 2)
 		{
 			if(arrayPointer[i] > arrayPointer[i+1])
 			{
@@ -30,11 +29,11 @@ void sort(int* arrayPointer, int size)
 		}
 		
 		// Sort the odd indices.
-		for (i = 1; i < (size-1); i += 2)
+		for (size_t j = 1; j < (size - 1); j += 2)
 		{
-			if(arrayPointer[i] > arrayPointer[i+1])
+			if(arrayPointer[j] > arrayPointer[j+1])
 			{
-				swap(arrayPointer, i, i+1);
+				swap(arrayPointer, j, j+1);
 				sorted = false;
 			}
 		}

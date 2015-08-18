@@ -2,8 +2,8 @@
 	Main header file.
 	Contains all pre-processor statements, function prototypes, structures, and constants.
 
-	Author: Matthew Boyette
-	Date:   6/24/2013
+	Author:	Matthew Boyette
+	Date:	6/24/2013
 */
 
 // ***** Constants *****
@@ -16,9 +16,14 @@
 
 // ***** Includes *****
 
+#include <stdbool.h>
+#include <stdarg.h>
+#include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <limits.h>
+#include <math.h>
 #include <ctype.h>
 
 // ***** Structures *****
@@ -31,20 +36,20 @@ typedef struct
 
 typedef struct _NODE
 {
-	char          label;
-	struct _NODE* next;
+	char			label;
+	struct _NODE*	next;
 } NODE;
 
 typedef struct
 {
-	VERTEX* vertex;
-	NODE*   firstAdj;
+	VERTEX*	vertex;
+	NODE*	firstAdj;
 } ROW;
 
 typedef struct
 {
-	size_t size;
-	ROW*   rows;
+	size_t	size;
+	ROW*	rows;
 } ADJLIST;
 
 // ***** Prototypes *****

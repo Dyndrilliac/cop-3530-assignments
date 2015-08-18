@@ -2,8 +2,8 @@
 	ParseFile source file.
 	Contains function to parse a file containing directional edges connected by two alphanumeric vertices.
 
-	Author: Matthew Boyette
-	Date:   6/24/2013
+	Author:	Matthew Boyette
+	Date:	6/24/2013
 */
 
 #include "main.h"
@@ -20,7 +20,6 @@ ADJLIST* parseFile(char* filePath)
 	int      character = 0;
 	size_t   preSize   = 0;
 	size_t   postSize  = 0;
-	size_t   i,j;
 
 	if (inputFile != NULL)
 	{
@@ -85,7 +84,7 @@ ADJLIST* parseFile(char* filePath)
 		if (adjList->rows != NULL)
 		{
 			fprintf(stdout, "\nAdjacency List:\n\n");
-			for (i = 0; i < adjList->size; i++)
+			for (size_t i = 0; i < adjList->size; i++)
 			{
 				NODE* currAdj;
 				ROW*  currRow = &adjList->rows[i];
@@ -95,7 +94,7 @@ ADJLIST* parseFile(char* filePath)
 				fprintf(stdout, "\tRow[%d]: (%c) -> {", i, currRow->vertex->label);
 
 				currAdj = currRow->firstAdj;
-				for (j = 0; j < preSize; j+=2)
+				for (size_t j = 0; j < preSize; j += 2)
 				{
 					if (currRow->vertex->label == preArray[j])
 					{

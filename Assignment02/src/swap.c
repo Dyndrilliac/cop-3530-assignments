@@ -2,13 +2,13 @@
 	Swap source file.
 	Contains swap function.
 
-	Author: Matthew Boyette
-	Date:   5/13/2013
+	Author:	Matthew Boyette
+	Date:	5/13/2013
 */
 
 #include "main.h"
 
-void swap(int* arrayPointer, int indexA, int indexB)
+void swap(int* arrayPointer, size_t indexA, size_t indexB)
 {
 	// Create a temporary buffer and store the value from arrayPointer[indexA].
 	int temp = arrayPointer[indexA];

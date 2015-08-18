@@ -16,7 +16,7 @@ public class A4
 		KnapsackSolver knapsackSolver = null;
 		String inputString = null;
 		boolean continueFlag = false;
-
+		
 		do
 		{
 			inputString = Support.getInputString(null,
@@ -24,13 +24,13 @@ public class A4
 					"\nPlease enter the necessary parameters:",
 				"Parameter Input");
 			continueFlag = ((inputString != null) && (inputString.equalsIgnoreCase("stop") == false));
-
+			
 			if (continueFlag)
 			{
 				String[] parameters = inputString.split(" ");
 				int[] weights = new int[parameters.length - 1];
 				int capacity = 0;
-
+				
 				if (Support.isStringParsedAsInteger(parameters[0]))
 				{
 					capacity = Integer.parseInt(parameters[0]);
@@ -41,7 +41,7 @@ public class A4
 						new Exception("Error Parsing Input: capacity parameter is not an integer!"),
 						true);
 				}
-
+				
 				for (int i = 0, j = (weights.length - 1); i < weights.length; i++, j--)
 				{
 					if (Support.isStringParsedAsInteger(parameters[j + 1]))
@@ -55,13 +55,13 @@ public class A4
 							true);
 					}
 				}
-
-				knapsackSolver = new KnapsackSolver(weights, capacity);
-				knapsackSolver.displaySolutionSet();
+				
+				knapsackSolver = new KnapsackSolver(capacity, weights);
+				knapsackSolver.displaySolutionSets();
 			}
 		}
 		while (continueFlag);
-
+		
 		System.exit(0);
 	}
 }

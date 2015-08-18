@@ -17,17 +17,17 @@ public class A5
 	{
 		HuffmanTree<Character> huffmanTree;
 		boolean continueFlag;
-
+		
 		if (args.length > 0)
 		{
 			for (String arg: args)
 			{
 				huffmanTree = new HuffmanTree<Character>(HuffmanTree.ALPHABET_ASCII);
-
+				
 				if (huffmanTree.openFile(arg))
 				{
 					continueFlag = true;
-
+					
 					do
 					{
 						StdOut.println("\nPlease select an option from the following menu.\n");
@@ -42,59 +42,59 @@ public class A5
 						StdOut.println("\n*Note: You may enter the word \"stop\" (not case-sensitive) at any time to end the program.\n");
 						StdOut.print("Selection: ");
 						String input = StdIn.readString();
-
+						
 						if (Support.isStringParsedAsInteger(input))
 						{
 							StdOut.println("");
-
+							
 							switch (Integer.parseInt(input))
 							{
-
+							
 								case 1:
-
+									
 									StdOut.println(huffmanTree.formatData(arg, HuffmanTree.DataFormats.ORIGINAL));
 									break;
-
+								
 								case 2:
-
+									
 									huffmanTree.traversal_preOrder(huffmanTree.getRoot());
 									StdOut.println("");
 									break;
-
+								
 								case 3:
-
+									
 									huffmanTree.traversal_inOrder(huffmanTree.getRoot());
 									StdOut.println("");
 									break;
-
+								
 								case 4:
-
+									
 									huffmanTree.traversal_postOrder(huffmanTree.getRoot());
 									StdOut.println("");
 									break;
-
+								
 								case 5:
-
+									
 									StdOut.println(huffmanTree.formatFrequencies());
 									break;
-
+								
 								case 6:
-
+									
 									StdOut.println(huffmanTree.formatCodeTable());
 									break;
-
+								
 								case 7:
-
+									
 									StdOut.println(huffmanTree.formatData(arg, HuffmanTree.DataFormats.COMPRESSED));
 									break;
-
+								
 								case 8:
-
+									
 									StdOut.println(huffmanTree.formatData(arg, HuffmanTree.DataFormats.UNCOMPRESSED));
 									break;
-
+								
 								default:
-
+									
 									Support.displayException(null,
 										new Exception("Unable to recognize your selection. Integers 1 through 8 are valid."),
 										false);
@@ -119,7 +119,7 @@ public class A5
 				}
 			}
 		}
-
+		
 		StdOut.println("\nExiting...\n");
 		System.exit(0);
 	}

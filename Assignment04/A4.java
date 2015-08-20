@@ -21,7 +21,7 @@ public class A4
 		{
 			inputString = Support.getInputString(null,
 				"*Note: You may enter \"stop\" (not case sensitive) to exit the program.\n" +
-					"\nPlease enter the necessary parameters:",
+				"\nPlease enter the necessary parameters:",
 				"Parameter Input");
 			continueFlag = ((inputString != null) && (inputString.equalsIgnoreCase("stop") == false));
 			

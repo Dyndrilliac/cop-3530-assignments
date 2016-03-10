@@ -1,6 +1,6 @@
 /*
 	RemoveDuplicate source file.
-	Contains function to BubbleSort a string and remove dupplicate characters.
+	Contains function to BubbleSort a string and remove duplicate characters.
 
 	Author:	Matthew Boyette
 	Date:	7/1/2013

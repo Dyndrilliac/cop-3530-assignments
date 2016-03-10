@@ -27,10 +27,13 @@ public class A4
 			
 			if (continueFlag)
 			{
-				String[] parameters = inputString.split(" ");
-				int[] weights = new int[parameters.length - 1];
-				int capacity = 0;
+				String[] parameters = inputString.trim().split(" ");
 				
+				assert(parameters.length > 1);
+				
+				int[] itemWeights = new int[parameters.length - 1];
+				int capacity = 0;
+
 				if (Support.isStringParsedAsInteger(parameters[0]))
 				{
 					capacity = Integer.parseInt(parameters[0]);
@@ -38,25 +41,25 @@ public class A4
 				else
 				{
 					Support.displayException(null,
-						new Exception("Error Parsing Input: capacity parameter is not an integer!"),
+						new Exception("Error Parsing Input: parameters[0] is not an integer!"),
 						true);
 				}
 				
-				for (int i = 0, j = (weights.length - 1); i < weights.length; i++, j--)
+				for (int i = 0; i < itemWeights.length; i++)
 				{
-					if (Support.isStringParsedAsInteger(parameters[j + 1]))
+					if (Support.isStringParsedAsInteger(parameters[i+1]))
 					{
-						weights[(i)] = Integer.parseInt(parameters[j + 1]);
+						itemWeights[i] = Integer.parseInt(parameters[i+1]);
 					}
 					else
 					{
 						Support.displayException(null,
-							new Exception("Error Parsing Input: weight[" + (i) + "] parameter is not an integer."),
+							new Exception("Error Parsing Input: parameters[" + (i+1) + "]  is not an integer!"),
 							true);
 					}
 				}
 				
-				knapsackSolver = new KnapsackSolver(capacity, weights);
+				knapsackSolver = new KnapsackSolver(capacity, itemWeights);
 				knapsackSolver.displaySolutionSets();
 			}
 		}

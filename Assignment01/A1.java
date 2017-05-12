@@ -6,7 +6,7 @@
 
 package Assignment01;
 
-import api.util.stdlib.StdOut;
+import edu.princeton.cs.algs4.StdOut;
 
 public class A1
 {
